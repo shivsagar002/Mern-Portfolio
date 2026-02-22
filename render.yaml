@@ -1,8 +1,8 @@
 services:
-  - type: static
+  - type: static_site
     name: dev-portfolio-nexus
     buildCommand: npm install && npm run build
-    staticPublishPath: dist
+    publishPath: dist
     envVars:
       - key: NODE_VERSION
         value: 18
