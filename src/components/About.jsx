@@ -6,9 +6,9 @@ const About = () => {
   const marqueeItems = [...techIcons, ...techIcons];
 
   return (
-    <section id="about" className="py-24 relative">
+    <section id="about" className="pb-24 md:pt-24 relative">
       <div className="container mx-auto px-6">
-        <div className="absolute left-[-2%] md:top-20 text-[15vw] md:text-[10rem] font-black text-white/[0.02] select-none pointer-events-none uppercase leading-none w-[100vw] overflow-hidden">
+        <div className="absolute left-[-2%] md:top-20 text-[15vw] md:text-[10rem] font-black text-foreground/[0.03] select-none pointer-events-none uppercase leading-none w-[100vw] overflow-hidden">
           About
         </div>
         <ScrollReveal>
@@ -68,7 +68,7 @@ const About = () => {
               <div className="lg:col-span-5 grid grid-cols-1 gap-4">
                 <div className="glass p-6 rounded-xl border border-white/5 hover:border-cyan-400/30 transition-all group">
                   <FaCode className="text-cyan-400 text-2xl mb-4 group-hover:scale-110 transition-transform" />
-                  <h4 className="text-white font-bold mb-2">
+                  <h4 className="text-foreground font-bold mb-2">
                     Algorithm Specialist
                   </h4>
                   <p className="text-sm text-muted-foreground">
@@ -79,7 +79,7 @@ const About = () => {
 
                 <div className="glass p-6 rounded-xl border border-white/5 hover:border-orange-400/30 transition-all group">
                   <FaServer className="text-orange-400 text-2xl mb-4 group-hover:scale-110 transition-transform" />
-                  <h4 className="text-white font-bold mb-2">
+                  <h4 className="text-foreground font-bold mb-2">
                     System Architect
                   </h4>
                   <p className="text-sm text-muted-foreground">
@@ -90,7 +90,7 @@ const About = () => {
 
                 <div className="glass p-6 rounded-xl border border-white/5 hover:border-green-400/30 transition-all group">
                   <FaRocket className="text-green-400 text-2xl mb-4 group-hover:scale-110 transition-transform" />
-                  <h4 className="text-white font-bold mb-2">
+                  <h4 className="text-foreground font-bold mb-2">
                     Performance Driven
                   </h4>
                   <p className="text-sm text-muted-foreground">

@@ -1,6 +1,6 @@
 import ScrollReveal from "./ScrollReveal.jsx";
 import emailjs from '@emailjs/browser';
-import { Mail, Loader2, Send, ExternalLink, MessageSquare, MapPin } from "lucide-react";
+import { Mail, Loader2, Send, MessageSquare} from "lucide-react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { useState } from "react";
 
@@ -43,15 +43,18 @@ const Contact = () => {
 };
 
   const inputClass =
-    "w-full px-5 py-4 rounded-xl bg-white/[0.03] border border-white/10 text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/30 focus:border-cyan-500/50 transition-all duration-300 backdrop-blur-sm hover:bg-white/[0.05]";
+    "w-full px-5 py-4 rounded-xl bg-white/[0.03] border border-primary/10 text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/30 focus:border-cyan-500/50 transition-all duration-300 backdrop-blur-sm hover:bg-primary/[0.05]";
 
   return (
-    <section id="contact" className="my-12 md:my-24 relative overflow-hidden bg-background">
+    <section id="contact" className="pb-16 md:pt-24 relative overflow-hidden bg-background">
       {/* Decorative Background Glows */}
       <div className="absolute top-1/4 -right-20 w-80 h-80 bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-1/4 -left-20 w-80 h-80 bg-orange-500/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
+        <div className="absolute left-[-6%] md:top-20 text-[15vw] md:text-[10rem] font-black text-foreground/[0.03] select-none pointer-events-none uppercase leading-none">
+          Contact
+        </div>
         <ScrollReveal>
           <div className="flex items-center gap-4 mb-4">
             <span className="text-xs font-bold uppercase tracking-[0.4em] text-cyan-400">Availability</span>
@@ -121,7 +124,7 @@ const Contact = () => {
           {/* Right Side: Enhanced Form */}
           <div className="lg:col-span-7">
             <ScrollReveal delay={0.2}>
-              <div className="glass rounded-3xl p-8 md:p-10 border border-white/5 shadow-2xl relative">
+              <div className="glass rounded-3xl p-8 md:p-10 border border-white/5 shadow-md hover:shadow-xl relative">
                 <div className="flex items-center gap-3 mb-8">
                    <MessageSquare className="text-cyan-400" size={20} />
                    <h3 className="text-xl font-bold">Send a Message</h3>

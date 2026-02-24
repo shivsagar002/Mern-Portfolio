@@ -19,52 +19,6 @@ import { useRef } from "react";
 import { experiences } from "../lib/experiences.js";
 import { achievements } from "../lib/achievements.js";
 
-// const AchievementCard = ({ achievement, index }) => {
-//   const ref = useRef(null);
-//   const inView = useInView(ref, { once: true, margin: "-40px" });
-//   const Icon = achievement.icon;
-
-//   return (
-//     <motion.div
-//       ref={ref}
-//       initial={{ opacity: 0, y: 30, scale: 0.9 }}
-//       animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-//       transition={{ delay: index * 0.15, duration: 0.5, type: "spring" }}
-//       whileHover={{ scale: 1.05, y: -5 }}
-//       className="glass rounded-xl p-6 text-center neon-border group cursor-default relative overflow-hidden"
-//     >
-//       <div
-//         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-//         style={{
-//           background: `radial-gradient(circle at center, ${achievement.color}10, transparent 70%)`,
-//         }}
-//       />
-//       <motion.div
-//         whileHover={{ rotate: [0, -10, 10, -5, 0] }}
-//         transition={{ duration: 0.5 }}
-//       >
-//         <Icon
-//           size={32}
-//           className="mx-auto mb-3 transition-all duration-300"
-//           style={{ color: achievement.color }}
-//         />
-//       </motion.div>
-//       <p className="text-sm font-medium relative z-10">{achievement.text}</p>
-//       <div className="flex justify-center mt-2 gap-0.5">
-//         {[...Array(3)].map((_, i) => (
-//           <Star
-//             key={i}
-//             size={10}
-//             className="text-primary/40 group-hover:text-primary transition-colors duration-300"
-//             fill="currentColor"
-//             style={{ transitionDelay: `${i * 100}ms` }}
-//           />
-//         ))}
-//       </div>
-//     </motion.div>
-//   );
-// };
-
 const AchievementCard = ({ achievement, index }) => {
   const Icon = achievement.icon;
 
@@ -85,7 +39,7 @@ const AchievementCard = ({ achievement, index }) => {
         }}
       />
 
-      <div className="relative h-full bg-[#0d1117]/90 backdrop-blur-md border border-white/5 rounded-xl p-5 flex flex-col justify-between overflow-hidden">
+      <div className="glass relative h-full backdrop-blur-md border border-white/5 rounded-xl p-5 flex flex-col justify-between overflow-hidden">
         <div>
           <div className="flex justify-between items-start mb-4">
             <div
@@ -96,11 +50,11 @@ const AchievementCard = ({ achievement, index }) => {
             </div>
             <ExternalLink
               size={16}
-              className="text-white/20 group-hover:text-white/50 transition-colors"
+              className="text-primary/20 group-hover:text-primary/50 transition-colors"
             />
           </div>
 
-          <h4 className="text-lg font-bold text-white mb-1">
+          <h4 className="text-lg font-bold text-foreground mb-1">
             {achievement.title}
           </h4>
           <p
@@ -177,7 +131,7 @@ const ExperienceCard = ({ exp, index }) => {
                 {isWork ? <Briefcase size={14} /> : <GraduationCap size={14} />}
                 {exp.period}
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-cyan-50 transition-colors">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-cyan-50 transition-colors">
                 {isWork ? exp.role : exp.course}
               </h3>
               <p className="text-sm md:text-base text-muted-foreground font-medium mt-1 italic leading-tight">
@@ -207,9 +161,9 @@ const ExperienceCard = ({ exp, index }) => {
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 relative">
+    <section id="experience" className="pb-24 md:pt-24 relative">
       <div className="container mx-auto px-6">
-        <div className="absolute left-[-2%] md:top-20 text-[15vw] md:text-[10rem] font-black text-white/[0.02] select-none pointer-events-none uppercase leading-none">
+        <div className="absolute left-[-2%] md:top-20 text-[15vw] md:text-[10rem] font-black text-foreground/[0.03] select-none pointer-events-none uppercase leading-none">
           History
         </div>
         <ScrollReveal>

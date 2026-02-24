@@ -109,32 +109,50 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         <AnimatePresence>
-          {mobileOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden glass border-t border-border"
+  {mobileOpen && (
+    <motion.div
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "auto" }}
+      exit={{ opacity: 0, height: 0 }}
+      className="md:hidden glass border-t border-border"
+    >
+      <ul className="flex flex-col items-center gap-4 py-6">
+        {navLinks.map((l) => (
+          <li key={l.href}>
+            <button
+              onClick={() => {
+                // 1. Close the menu first
+                setMobileOpen(false);
+                
+                // 2. Use a tiny timeout to allow the exit animation 
+                // to start/calculate before scrolling
+                setTimeout(() => {
+                  const element = document.querySelector(l.href);
+                  if (element) {
+                    const offset = 80; // Adjust this based on your navbar height
+                    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                    
+                    window.scrollTo({
+                      top: elementPosition - offset,
+                      behavior: "smooth",
+                    });
+                  }
+                }, 10); 
+              }}
+              className={`text-base font-semibold transition-colors ${
+                activeSection === l.href
+                  ? "text-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
             >
-              <ul className="flex flex-col items-center gap-4 py-6">
-                {navLinks.map((l) => (
-                  <li key={l.href}>
-                    <button
-                      onClick={() => handleClick(l.href)}
-                      className={`text-base font-semibold transition-colors ${
-                        activeSection === l.href
-                          ? "text-primary"
-                          : "text-muted-foreground hover:text-foreground"
-                      }`}
-                    >
-                      {l.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              {l.label}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  )}
+</AnimatePresence>
       </motion.nav>
     </>
   );

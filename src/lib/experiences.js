@@ -1,19 +1,4 @@
 export const experiences = [
-    //======== For Experience Update ======== 
-    // {
-    //     role:"",
-    //     company:"",
-    //     period:"",
-    //     type:"work",
-    //     points:[]
-    // }
-    //======== For Gap Update ======== 
-    // {   
-    //     type:"gap",
-    //     label:"",
-    //     period:"",
-    //     description:""
-    // }
     {
         role: "Full-Stack Developer Intern",
         company: "Graphura India Limited",

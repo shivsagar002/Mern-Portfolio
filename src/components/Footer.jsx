@@ -5,8 +5,8 @@ import { FaGithub, FaLinkedinIn, FaEnvelope, FaCode, FaWhatsapp } from 'react-ic
 const Footer = () => {
   return (
     <ScrollReveal>
-    <footer className="container mx-auto px-6 mt-32 pb-12 border-t border-white/10">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-10">
+    <footer className="container mx-auto px-6 mt-10 pb-12 border-t border-primary/10">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-8 pt-10">
         
         {/* Brand Section */}
         <div className="space-y-4">
@@ -23,7 +23,7 @@ const Footer = () => {
 
         {/* Contact/Social Section */}
         <div className="space-y-4">
-          <h4 className="text-right text-sm font-semibold uppercase tracking-widest text-foreground/70">
+          <h4 className=" md:text-right text-sm font-semibold uppercase tracking-widest text-foreground/70">
             Connect
           </h4>
           <div className="flex gap-5">
@@ -49,7 +49,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Copyright */}
-      <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="mt-10 pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} Shiv Sagar. All rights reserved.
         </p>

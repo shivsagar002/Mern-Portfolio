@@ -104,10 +104,10 @@ const FlipCard = ({ project }) => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="mb-16 relative">
+    <section id="projects" className="pb-10 md:pt-24 mb-16 relative">
       <div className="container mx-auto px-6">
-        <div className="absolute left-[-2%] md:top-20 text-[15vw] md:text-[10rem] font-black text-white/[0.02] select-none pointer-events-none uppercase leading-none w-[100vw] overflow-hidden">
-          Apps
+        <div className="absolute left-[-2%] md:top-20 text-[15vw] md:text-[10rem] font-black text-foreground/[0.03] select-none pointer-events-none uppercase leading-none w-[100vw] overflow-hidden">
+          My Apps
         </div>
         <ScrollReveal>
           <div className="flex items-center gap-4 mb-4">
