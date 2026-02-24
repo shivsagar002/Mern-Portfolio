@@ -2,47 +2,8 @@ import ScrollReveal from "./ScrollReveal.jsx";
 import { techIcons } from "@/lib/techIcons.js";
 import { ExternalLink } from "lucide-react";
 import { SiGithub } from "react-icons/si";
-import projectTaskMgmt from "@/assets/project-task-mgmt.jpg";
-import projectChat from "@/assets/project-chat.jpg";
-import projectEcommerce from "@/assets/project-ecommerce.jpg";
-import projectDevops from "@/assets/project-devops.jpg";
+import { projects } from "@/lib/projects.js";
 
-const projects = [
-  {
-    title: "Task Management System",
-    image: projectTaskMgmt,
-    description:
-      "Scalable team collaboration with RESTful APIs and secure auth.",
-    tech: ["React", "Node.js", "MongoDB", "Docker", "Tailwind CSS"],
-    github: "#",
-    live: "#",
-  },
-  {
-    title: "Real-Time Chat Platform",
-    image: projectChat,
-    description: "Messaging with WebSocket, real-time presence & encryption.",
-    tech: ["React", "Node.js", "MongoDB", "TypeScript", "AWS"],
-    github: "#",
-    live: "#",
-  },
-  {
-    title: "E-Commerce Dashboard",
-    image: projectEcommerce,
-    description: "Admin panel with analytics, inventory & payment integration.",
-    tech: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "Docker"],
-    github: "#",
-    live: "#",
-  },
-  {
-    title: "DevOps CI/CD Pipeline",
-    image: projectDevops,
-    description:
-      "Automated build, test & deploy with containerized microservices.",
-    tech: ["Docker", "AWS", "Node.js", "Git", "GitHub"],
-    github: "#",
-    live: "#",
-  },
-];
 
 const FlipCard = ({ project }) => {
   return (
@@ -119,6 +80,7 @@ const FlipCard = ({ project }) => {
             {project.github && (
               <a
                 href={project.github}
+                target="_blank"
                 className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <SiGithub size={16} /> Repo
@@ -127,6 +89,7 @@ const FlipCard = ({ project }) => {
             {project.live && (
               <a
                 href={project.live}
+                target="_blank"
                 className="flex items-center gap-1.5 text-sm text-primary hover:text-primary/80 transition-colors"
               >
                 <ExternalLink size={16} /> Preview
@@ -141,19 +104,19 @@ const FlipCard = ({ project }) => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 relative">
+    <section id="projects" className="mb-16 relative">
       <div className="container mx-auto px-6">
+        <div className="absolute left-[-2%] md:top-20 text-[15vw] md:text-[10rem] font-black text-white/[0.02] select-none pointer-events-none uppercase leading-none w-[100vw] overflow-hidden">
+          Apps
+        </div>
         <ScrollReveal>
-          <p className="text-primary font-mono text-sm mb-2 tracking-widest uppercase">
-            Projects
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <div className="flex items-center gap-4 mb-4">
+            <span className="text-xs font-bold uppercase tracking-[0.4em] text-cyan-400">Projects</span>
+            <div className="h-[1px] w-12 bg-cyan-500" />
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-16 tracking-tight">
             Featured <span className="gradient-text">Work</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mb-12">
-            Selected projects demonstrating scalable architecture and
-            production-grade interfaces.
-          </p>
         </ScrollReveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

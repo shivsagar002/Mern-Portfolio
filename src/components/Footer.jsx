@@ -1,7 +1,10 @@
+import ScrollReveal from "./ScrollReveal.jsx";
+
 import { FaGithub, FaLinkedinIn, FaEnvelope, FaCode, FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
   return (
+    <ScrollReveal>
     <footer className="container mx-auto px-6 mt-32 pb-12 border-t border-white/10">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-10">
         
@@ -55,6 +58,7 @@ const Footer = () => {
         </p>
       </div>
     </footer>
+    </ScrollReveal>
   );
 };
 

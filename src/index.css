@@ -329,3 +329,29 @@
 .animate-pulse-glow {
     animation: pulse_glow 1s ease-in-out infinite;
 }
+
+/* @keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+} */
+
+@layer utilities {
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 12px)); } /* -12px accounts for half the gap */
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, CheckCircle, Loader2 } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const HireMeModal = ({ open, onClose }) => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
@@ -19,18 +20,42 @@ const HireMeModal = ({ open, onClose }) => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!validate()) return;
-    setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1500));
+  e.preventDefault();
+  if (!validate()) return;
+  setSubmitting(true);
+
+  const serviceId = import.meta.env.VITE_SERVICE_ID;
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+  const userTemplateId = import.meta.env.VITE_HIRE_ME_TEMPLATE_ID;
+  console.log(serviceId, publicKey, userTemplateId);
+
+  const templateParams = {
+    from_name: form.name,
+    from_email: form.email,
+    phone_number: form.phone || "Not Provided", // New field added here
+    message: form.message,
+    to_name: 'Shiv Sagar', // Your name
+  };
+
+  try {
+    
+    // Send Confirmation to User
+    await emailjs.send(serviceId, userTemplateId, templateParams, publicKey);
+
     setSubmitting(false);
     setSubmitted(true);
+    
     setTimeout(() => {
       setSubmitted(false);
       setForm({ name: "", email: "", phone: "", message: "" });
       onClose();
     }, 2500);
-  };
+  } catch (error) {
+    console.error('EmailJS Error:', error);
+    setSubmitting(false);
+    alert("Failed to send the request. Please try again.");
+  }
+};
 
   const update = (key, val) => {
     setForm((p) => ({ ...p, [key]: val }));
@@ -74,17 +99,17 @@ const HireMeModal = ({ open, onClose }) => {
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <input placeholder="Full Name *" value={form.name} onChange={(e) => update("name", e.target.value)} className={inputClass("name")} />
+                    <input placeholder="Full Name *" id="name" name="name" autoComplete="name" value={form.name} onChange={(e) => update("name", e.target.value)} className={inputClass("name")} />
                     {errors.name && <p className="text-destructive text-xs mt-1">{errors.name}</p>}
                   </div>
                   <div>
-                    <input placeholder="Email *" type="email" value={form.email} onChange={(e) => update("email", e.target.value)} className={inputClass("email")} />
+                    <input placeholder="Email *" id="email" name="email" type="email" autoComplete="email" value={form.email} onChange={(e) => update("email", e.target.value)} className={inputClass("email")} />
                     {errors.email && <p className="text-destructive text-xs mt-1">{errors.email}</p>}
                   </div>
-                  <input placeholder="Contact Number" value={form.phone} onChange={(e) => update("phone", e.target.value)} className={inputClass("")} />
+                  <input placeholder="Contact Number" id="phone" name="phone" autoComplete="tel" value={form.phone} onChange={(e) => update("phone", e.target.value)} className={inputClass("phone")} />
 
                   <div>
-                    <textarea placeholder="Message / Project Details *" rows={4} value={form.message} onChange={(e) => update("message", e.target.value)} className={inputClass("message")} />
+                    <textarea placeholder="Message / Project Details *" id="message" name="message" rows={4} value={form.message} onChange={(e) => update("message", e.target.value)} className={inputClass("message")} />
                     {errors.message && <p className="text-destructive text-xs mt-1">{errors.message}</p>}
                   </div>
 
