@@ -2,7 +2,7 @@ export const experiences = [
     {
         role: "Full-Stack Developer Intern",
         company: "Graphura India Limited",
-        period: "Feb 2026 - Present",
+        period: "Feb 2026 - Mar 2026",
         type: "work",
         points: [
             "Architected and maintained a robust Employee Management System (EMS) using the MERN stack to streamline internal HR workflows and data integrity.",

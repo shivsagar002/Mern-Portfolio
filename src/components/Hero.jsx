@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { techIcons } from "@/lib/techIcons.js";
+import { techIcons } from "@/lib/techIcons.jsx";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import HireMeModal from "./HireMeModal.jsx";

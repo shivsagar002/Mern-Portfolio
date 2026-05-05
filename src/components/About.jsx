@@ -1,5 +1,5 @@
 import ScrollReveal from "./ScrollReveal.jsx";
-import { techIcons } from "@/lib/techIcons.js";
+import { techIcons } from "@/lib/techIcons.jsx";
 import { FaCode, FaServer, FaRocket } from "react-icons/fa";
 
 const About = () => {
@@ -33,23 +33,12 @@ const About = () => {
                   {/* Subtle background glow effect */}
                   <div className="absolute -top-24 -right-24 w-48 h-48 bg-cyan-500/10 blur-[100px] group-hover:bg-cyan-500/20 transition-all duration-500" />
 
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    My engineering journey is defined by a transition from
-                    **structural rigidity to modern agility**. Having mastered
-                    the foundational discipline of{" "}
-                    <span className="text-foreground font-medium">
-                      C++ and Java
-                    </span>
-                    , I developed a deep-seated intuition for memory management,
-                    algorithmic efficiency, and Object-Oriented Design.
+                  <p className="text-muted-foreground text-lg leading-relaxed text-justify leading-12">
+                    I am a <span className="text-foreground font-medium">Software Engineer </span> currently pursuing my <span className="text-foreground font-medium">MCA from USICT (GGSIPU)</span>. My academic background has provided me with a rigorous foundation in Data Structures & Algorithms (DSA), allowing me to approach problem-solving with efficiency and logical precision. I don't just build apps; I engineer systems that are optimized for performance and scalability.
                   </p>
 
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    Today, I apply that "systems-first" mindset to the modern
-                    web. I don't just ship features; I architect
-                    **production-ready ecosystems**. By combining the speed of
-                    high-level frameworks with the precision of low-level logic,
-                    I deliver software that is as robust as it is intuitive.
+                  <p className="text-muted-foreground text-lg leading-relaxed text-justify mt-6 leading-12">
+                    Currently, I am expanding my expertise into the <span className="text-foreground font-medium">Artificial Intelligence</span> domain. I am actively learning and building applications that bridge the gap between traditional web architecture and AI capabilities. Whether it's integrating Large Language Models (LLMs) or developing specialized AI tools like my <span className="text-foreground font-medium">IntervueX</span> platform, I am focused on creating the next generation of "intelligent" software.
                   </p>
 
                   <div className="pt-6 border-t border-white/10">
