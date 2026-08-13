@@ -33,8 +33,8 @@ const About = () => {
                   {/* Subtle background glow effect */}
                   <div className="absolute -top-24 -right-24 w-48 h-48 bg-cyan-500/10 blur-[100px] group-hover:bg-cyan-500/20 transition-all duration-500" />
 
-                  <p className="text-muted-foreground text-lg leading-relaxed text-justify leading-12">
-                    I am a <span className="text-foreground font-medium">Software Engineer </span> currently pursuing my <span className="text-foreground font-medium">MCA from USICT (GGSIPU)</span>. My academic background has provided me with a rigorous foundation in Data Structures & Algorithms (DSA), allowing me to approach problem-solving with efficiency and logical precision. I don't just build apps; I engineer systems that are optimized for performance and scalability.
+                  <p className="text-muted-foreground text-lg leading-relaxed text-justify leading-12" arial-label="About Me">
+                    I am a <span className="text-foreground font-medium">Software Engineer </span> completed <span className="text-foreground font-medium">MCA from USICT (GGSIPU)</span>. My academic background has provided me with a rigorous foundation in Data Structures & Algorithms (DSA), allowing me to approach problem-solving with efficiency and logical precision. I don't just build apps; I engineer systems that are optimized for performance and scalability.
                   </p>
 
                   <p className="text-muted-foreground text-lg leading-relaxed text-justify mt-6 leading-12">

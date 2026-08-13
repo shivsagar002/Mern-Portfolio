@@ -1,5 +1,18 @@
 export const experiences = [
     {
+        role: "Software Engineer",
+        company: "Northrop Management Private Limited",
+        period: "Aug 2026 - Present",
+        type: "work",
+        points: [
+            "Managed and optimized core company software systems, ensuring high availability, performance reliability, and seamless cross-functional workflows",
+            "Engineered and integrated new features into existing client websites and applications based on evolving business requirements and user feedback.",
+            "Developed full-stack web applications completely from scratch for diverse clients, translating initial concepts and wireframes into scalable, production-ready solutions using modern technologies (such as the MERN stack).",
+            "Architected scalable RESTful APIs and backend services to support complex CRUD operations, incorporating advanced filtering, pagination, and robust data integrity measures.",
+            "Implemented secure authentication systems and Role-Based Access Control (RBAC) to safeguard sensitive user and client data."
+        ]
+    },
+    {
         role: "Full-Stack Developer Intern",
         company: "Graphura India Limited",
         period: "Feb 2026 - Mar 2026",
@@ -13,7 +26,7 @@ export const experiences = [
     {
         role: "Web Developer",
         company: "ACM Student Chapter, USICT",
-        period: "Oct 2024 - Present",
+        period: "Oct 2024 - June 2026",
         type: "work",
         points: [
             "Contributed to the ACM website revamp, assisting in the migration from legacy codebases to modern frameworks.",

@@ -53,7 +53,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           className="text-primary font-mono text-sm mb-4 tracking-widest uppercase">
-          Full-Stack Developer
+          Full-Stack Software Engineer
         </motion.p>
 
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.8 }}
@@ -63,7 +63,7 @@ const Hero = () => {
 
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}
           className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto mb-10">
-          Full-Stack Developer specializing in modern web technologies, clean architecture, and high-performance systems.
+          Full-Stack Software Engineer specializing in modern web technologies, clean architecture, and high-performance systems.
         </motion.p>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}

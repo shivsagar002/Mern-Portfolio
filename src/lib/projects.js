@@ -18,7 +18,7 @@ export const projects = [
     image: intervuex,
     description: "A full-stack, real-time AI integrated interview platform featuring secure authentication, Dynamic Interviews using Native AI, Advanced Analytics and high-performance audio/video streaming. Engineered for low-latency communication and a seamless candidate evaluation experience.",
     tech: ["Gemini", "MongoDB", "Express", "React", "Node.js"],
-    github: "",
+    github: "https://github.com/shivsagar002/InterviueX",
     live: "https://intervuex.shivsagar.tech/",
     badge:"Native AI"
   },
